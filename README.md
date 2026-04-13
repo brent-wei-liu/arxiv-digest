@@ -65,7 +65,7 @@
 |----------|------|------|
 | cs.AI | Artificial Intelligence | 人工智能 |
 | cs.LG | Machine Learning | 机器学习 |
-| cs.CL | Computation and Language | NLP / 大语言模型 |
+| cs.CL | Computation and Language (NLP/LLM) | NLP / 大语言模型 |
 | cs.CV | Computer Vision | 计算机视觉 |
 | cs.MA | Multiagent Systems | 多智能体系统 |
 | stat.ML | Statistics - Machine Learning | 统计机器学习 |
@@ -126,8 +126,8 @@
 **query 输出 JSON 结构：**
 ```json
 {
-  "meta": { "days", "date", "paper_count", "profile", "focus_instructions" },
-  "papers": { "按分类分组的论文数据" },
+  "meta": { "date", "days", "focus", "focus_instructions", "total_papers", "focused_papers", "category_counts" },
+  "papers": [ "按 focus 过滤后的论文列表（flat list）" ],
   "prompts": {
     "draft": "完整的初稿 Prompt（论文数据已嵌入）",
     "critique_template": "审稿模板（{draft} 占位符）",
